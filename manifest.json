@@ -1,0 +1,16 @@
+{
+    "name": "SimpleNewTab",
+    "description": "A simple way to open a tab!",
+    "version": "0.0.0.1",
+    "manifest_version":2,
+    "permissions" : ["management", "alarms", "tabs"],
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    },
+    "content_scripts":[{
+        "matches":["<all_urls>"],
+        "js":["scripts.js"],
+        "css":["style.css"]
+    }    
+    ]
+}
